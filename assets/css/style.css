@@ -1,0 +1,495 @@
+
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+ 
+display: grid;
+grid-template-areas:
+"header header header header"
+"main main main";
+
+
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: auto auto ;   
+
+    background: #000000;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Syne', sans-serif;
+}
+
+
+
+
+h1 {
+    font-size: 70px;
+    line-height: 1em;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 60px;
+    margin: 0px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+section {
+    position: relative;
+    display: flex;
+    width: 100%;
+   height: calc(100vh - 100px);
+    top: 100px;
+    z-index: 2;
+}
+
+section.sticky {
+    position: sticky;
+    margin-top: 150px;
+}
+
+section.full-screen {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    margin-top: 0;
+    z-index: 3;
+}
+
+/* navigation */
+.header{
+nav {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    z-index: 1;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 50px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-family: 'Space Mono', monospace;
+}
+}
+
+/* about section */
+
+section.about .empty {
+    flex-basis: 37.5vw;
+    background: red;
+    border-radius:100px;
+    transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
+}
+
+section.about article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+section.about article .title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: blue;
+    border-radius: 100px;
+    padding: 3.125vw 6.25vw;
+    transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
+}
+
+section.about article .description {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: pink;
+    border-radius:100px;
+    padding: 3.125vw 6.25vw;
+    color: #000000;
+}
+
+/* service section */
+
+section.service article {
+    display: flex;
+    width: 100%;
+}
+
+section.service figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 56.25vw;
+    margin: 0;
+    background: green;
+    border-radius:100px;
+    max-width: 62.5vw;
+    transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
+}
+
+section.service figure img {
+    width: 25%;
+    height: 50%;
+}
+
+section.service .text {
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    background: #1f1a1c;
+    padding: 3.125vw 6.25vw;
+    border-radius:100px;
+}
+
+
+
+/* service section animations */
+
+section.service.service-html figure img {
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+}
+
+section.service.service-tauro figure img {
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+}
+
+section.service.service-kanon figure img {
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+}
+
+section.service.service-mask figure img {
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+}
+
+section.service.service-orange figure img {
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+}
+
+section.service.service-pink figure img {
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+}
+
+
+
+section.service.service-gold figure img {
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+}
+
+section.service.service-gray figure img {
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+}
+
+section.service.service-light-blue figure img {
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+}
+
+section.service.service-green figure img {
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+}
+
+
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(5%);
+    }
+}
+
+
+
+@keyframes scale {
+    0% {
+        transform: scale(.75);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+/* service section overrides */
+
+section.service.service-html figure {
+    background: red;
+}
+
+section.service.service-tauro figure {
+    background: yellow;
+}
+
+section.service.service-kanon figure {
+    background: blueviolet;
+}
+
+section.service.service-mask figure {
+    background: brown;
+}
+
+section.service.service-orange figure {
+    background: orange;
+}
+
+section.service.service-pink figure {
+    background: pink;
+}
+
+section.service.service-gold figure {
+    background: gold;
+}
+
+section.service.service-gray figure {
+    background: gray;
+}
+
+section.service.service-light-blue figure {
+    background:lightblue;
+}
+
+section.service.service-green figure {
+    background:green;
+}
+
+
+section.service.service-html .text h2,
+section.service.service-html .text a {
+    color: pink;
+}
+
+
+
+
+
+/* contact section */
+
+
+
+
+section.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( #ffd700, #001f54,#000000 70%, #C0C0C0);
+    border-radius:100px;
+}
+
+section.contact a {
+    font-size: 50px;
+    line-height: 1.5;
+    color: white;
+    font-weight: bold;
+    transition: filter 2s cubic-bezier(.77,.28,.42,.93);
+    will-change: filter;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+section.contact a:hover {
+    filter: blur(20px);
+}
+
+@media (max-width: 575px) {
+    
+    body {
+        font-size: 14px; 
+        display: flex;
+        flex-direction: column; 
+        background: black ;
+      
+
+    
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    
+
+
+        
+    h1 {
+        font-size: 20px;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 20px; 
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    
+
+    a {
+        font-size: 14px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    section.about .empty{
+margin-top: 100px;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px;
+        height:500px; 
+        top:1%;
+    }
+
+   
+
+    section.about article {
+        display: flex;
+        flex-direction: column; 
+    }
+
+
+    section.about article .title,
+    section.about article .description {
+        font-size: 14px; 
+        padding: 25px;
+        text-align: center; 
+        height: 400px;
+        
+        
+    }
+
+    /* Servicios */
+    section.service article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 100%;
+        height: 1000px;
+      
+        
+       
+        
+      
+    }
+
+
+ section.service figure {
+    width: 100%;
+        max-width: 100%;
+        
+        width: 100%;
+        height: 300px; 
+       
+    }
+
+    section.service figure img {
+
+        width: 120px; 
+        height:200px; 
+        display: block;
+        
+    }
+    section.service .text {
+        display: flex;
+        width: 100%;
+       height:50%;
+        text-align: center;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px;
+        word-wrap: break-word;
+        
+    }
+
+    section.contact {
+        flex-direction: column;
+        padding: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section.contact a {
+        font-size: 20px; 
+        text-align: center;
+        padding: 10px;
+    }
+
+}
+
